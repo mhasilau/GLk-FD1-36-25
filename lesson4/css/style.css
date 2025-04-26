@@ -1,0 +1,18 @@
+span {
+  color: red;
+}
+.span-class {
+  font-size: 25px;
+  color: blue;
+}
+#span-id {
+  color: green;
+}
+/* .span-class {
+  font-size: 10px;
+  color: rgb(89, 255, 0);
+} */
+div {
+  font-size: 30px;
+  color: cadetblue;
+}
