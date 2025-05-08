@@ -1,0 +1,74 @@
+.wrapper {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.blue, .green, .red, .yellow {
+    width: 150px;
+    height: 150px;
+}
+
+.blue, .blue-2, .blue-3 {
+    background-color: blue;
+}
+
+.red, .red-2, .red-3 {
+    background-color: red;
+}
+
+.yellow, .yellow-2, .yellow-3 {
+    background-color: yellow;
+}
+
+.green, .green-2, .green-3 {
+    background-color: green;
+}
+
+.wrapper-2 {
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blue-2, .blue-3 {
+    width: 130px;
+}
+
+.red-2, .red-3 {
+    height: 120px;
+    width: 100px;
+}
+
+.yellow-2, .yellow-3 {
+    height: 110px;
+    width: 110px;
+}
+
+.green-2, .green-3 {
+    height: 150px;
+    width: 100px;
+}
+
+.wrapper-3 {
+    height: 300px;
+    border: 1px solid black;
+    display: flex; /*позиционирование по оси Х*/
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.blue-3 {
+    align-self: stretch;
+}
+
+.red-3 {
+    align-self: flex-end;
+}
+
+.yellow-3 {
+    align-self: flex-start;
+}
