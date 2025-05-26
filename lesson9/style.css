@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+.hover-id {
+    background-color: aqua;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.hover-id:hover {
+    background-color: coral;
+    color: red;
+    cursor: pointer;
+}
+
+.up {
+    display: block;
+}
+
+.end {
+    display: none;
+}
+
+.c-link:link {
+    color: aqua;
+}
+
+.c-link:active {
+    color: yellow;
+}
+
+.c-link:visited {
+    color: darkgreen;
+}
+
+.div-p > p:nth-child(5n-2) {
+    background-color: aqua;
+    color: darkslateblue;
+    font-size: large;
+}
+
+span::before {
+    content: "***";
+}
+
+span::after {
+    content: "***";
+}
+
+@media (min-width: 600px) {
+    .div-p {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .div-p > p:not(:first-child) {
+        margin-left: 5px;
+    }
+}
+
+@media (orientation: landscape) {
+    .up {
+        display: none;
+    }
+
+    .end {
+        display: block;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: dimgrey;
+    }
+}
