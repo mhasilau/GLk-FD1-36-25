@@ -1,0 +1,32 @@
+$logo-size: 50px;
+
+@mixin info {
+  display: flex;
+  height: 100px;
+  background-color: aqua;
+}
+
+.page {
+  .header {
+    @include info;
+
+    &-logo {
+      width: $logo-size;
+      height: $logo-size;
+      border-radius: 50%;
+      background-color: rgb(129, 103, 103);
+    }
+
+    &-search {
+    }
+
+    &-user {
+      &-avatar {
+      }
+    }
+  }
+  // .content {}
+  .footer {
+    @include info;
+  }
+}

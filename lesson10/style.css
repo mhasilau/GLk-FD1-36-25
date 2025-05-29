@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  /* box-sizing: content-box; */
+  box-sizing: inherit;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.div {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+}
+
+.red {
+  background-color: red;
+  /* left: 100px; */
+  /* top: 100px; */
+  z-index: 10;
+  border: 5px solid black;
+  margin: 10px;
+  padding: 10px;
+  /* opacity: 0.5; */
+  overflow: hidden;
+}
+
+.red > p {
+  opacity: 1;
+}
+
+.blue {
+  background-color: blue;
+  left: 130px;
+  top: 130px;
+  z-index: 7;
+}
+
+.green {
+  background-color: green;
+  top: 160px;
+  left: 70px;
+}
+
+.yellow {
+  background-color: yellow;
+  top: 70px;
+  left: 50px;
+  z-index: 8;
+}
+
+.animate {
+  top: 200px;
+  z-index: 11;
+
+  animation-name: animate-to-circle;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+  animation-play-state: running;
+  animation-fill-mode: both;
+}
+
+@keyframes animate-to-circle {
+  from {
+    background-color: blueviolet;
+    left: 0;
+  }
+  50% {
+    background-color: rgb(238, 194, 20);
+    top: 250px;
+  }
+  to {
+    border-radius: 50%;
+    background-color: #20fe27;
+    left: 300px;
+  }
+}
+
+.btn {
+  position: absolute;
+  top: 400px;
+  margin: 10px;
+  background-color: aquamarine;
+  color: darkorange;
+  border-radius: 15px;
+  width: 150px;
+  height: 40px;
+  transition: background-color 2s ease-in 0.3s;
+}
+
+.btn:hover {
+  background-color: black;
+}
+
+.btn:active {
+  background-color: rgb(251, 8, 8);
+}
