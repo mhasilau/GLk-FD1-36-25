@@ -162,8 +162,16 @@
 // const arr = str.split('');
 // console.log(arr);
 
-let userName = 'mikhail';
-const arr = userName.split('');
-arr[0] = arr[0].toUpperCase();
-userName = arr.join('');
-console.log(userName);
+// let userName = 'mikhail';
+// const arr = userName.split('');
+// arr[0] = arr[0].toUpperCase();
+// userName = arr.join('');
+// console.log(userName);
+
+
+// task 1
+// fsdf
+// fsdfdsg
+// fsdfdsg
+
+// task 2
