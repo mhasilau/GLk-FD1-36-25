@@ -105,24 +105,24 @@ const usersData = [
   },
 ];
 
-// const wrapper = document.querySelector('.wrapper');
-//
-// for (const user of usersData) {
-//   const friendDiv = document.createElement('div');
-//   friendDiv.classList.add('friend');
-//   const photoDiv = document.createElement('div');
-//   const userDiv = document.createElement('div');
-//   photoDiv.classList.add('photo');
-//   userDiv.classList.add('user');
-//   const img = document.createElement('img');
-//   img.src = user.img;
-//   photoDiv.append(img);
-//   const span = document.createElement('span');
-//   span.textContent = user.name;
-//   userDiv.append(span);
-//   friendDiv.append(photoDiv, userDiv);
-//   wrapper.append(friendDiv);
-// }
+const wrapper = document.querySelector('.wrapper');
+
+for (const user of usersData) {
+  const friendDiv = document.createElement('div');
+  friendDiv.classList.add('friend');
+  const photoDiv = document.createElement('div');
+  const userDiv = document.createElement('div');
+  photoDiv.classList.add('photo');
+  userDiv.classList.add('user');
+  const img = document.createElement('img');
+  img.src = user.img;
+  photoDiv.append(img);
+  const span = document.createElement('span');
+  span.textContent = user.name;
+  userDiv.append(span);
+  friendDiv.append(photoDiv, userDiv);
+  wrapper.append(friendDiv);
+}
 //
 // const inp = document.querySelector('#name');
 // const val = document.querySelector('#inp-val');
