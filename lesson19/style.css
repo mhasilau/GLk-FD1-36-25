@@ -1,0 +1,41 @@
+body {
+    height: 1500px;
+    width: 1500px;
+}
+
+.wrapper {
+    background-color: #20fe27;
+    width: 1000px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+}
+
+.wr1 {
+    background-color: #e621c8;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wr2 {
+    background-color: #edd00c;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wr3 {
+    background-color: #002cf6;
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
