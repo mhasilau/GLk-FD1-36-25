@@ -1,0 +1,14 @@
+body {
+  background-color: bisque;
+}
+
+.page1-form {
+  background-color: #200bc1;
+
+  &-login {
+    input {
+      font-size: 10px;
+      color: red;
+    }
+  }
+}
