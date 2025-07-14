@@ -1,0 +1,59 @@
+.header {
+    height: 70px;
+    background-color: #2078f8;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.info {
+    display: flex;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.bucket {
+    display: flex;
+    align-items: center;
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+}
