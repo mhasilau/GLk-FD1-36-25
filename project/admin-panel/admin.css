@@ -1,0 +1,10 @@
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.users-div {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
