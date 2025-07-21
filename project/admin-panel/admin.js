@@ -62,8 +62,12 @@ function getDataF() {
         editBtn.innerText = 'Edit';
         const deleteBtn = document.createElement('button');
         deleteBtn.innerText = 'Delete';
+
+        const moreBtn = document.createElement('button');
+        moreBtn.innerText = 'More';
+
         const actionsDiv = document.createElement('div');
-        actionsDiv.append(editBtn, deleteBtn);
+        actionsDiv.append(editBtn, deleteBtn, moreBtn);
         name.value = element.username;
         email.value = element.email;
         avatar.src = element.avatar;
@@ -75,14 +79,17 @@ function getDataF() {
             email: email.value,
             avatar: element.avatar,
           };
-
-
           editData(element.id, data);
         };
 
         deleteBtn.onclick = event => {
           event.preventDefault();
           deleteData(element.id);
+        };
+
+        moreBtn.onclick = event => {
+          event.preventDefault();
+          loadMore(element.id);
         };
 
         div.append(avatar, name, email, actionsDiv);
@@ -106,4 +113,9 @@ function deleteData(id) {
   fetch(`${DB_API}/users/${id}.json`, {
     method: 'DELETE',
   }).then(() => getDataF());
+}
+
+function loadMore(id) {
+  sessionStorage.setItem('id', JSON.stringify(id));
+  window.location.href = '../more-info/more.html';
 }
