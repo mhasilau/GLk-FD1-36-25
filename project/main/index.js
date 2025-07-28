@@ -38,6 +38,22 @@ const products = [
 ];
 
 const filmsDiv = document.querySelector('.films');
+const getDataBtn = document.querySelector('#get-data');
+const cardItemsCount = document.querySelector('#card-items');
+const cardPage = document.querySelector('.bucket');
+
+(function () {
+  if (sessionStorage.getItem('orders')) {
+    const orders = JSON.parse(sessionStorage.getItem('orders'));
+    cardItemsCount.textContent = orders.length;
+  } else {
+    sessionStorage.setItem('orders', JSON.stringify([]));
+  }
+})();
+
+cardPage.onclick = () => {
+  window.location.href = '/project/card/card.html';
+};
 
 function draw(filterOption) {
   filmsDiv.innerHTML = '';
@@ -47,8 +63,7 @@ function draw(filterOption) {
     filmsToDraw = products.filter(film => film.genre.includes(filterOption));
   }
 
-
-  filmsToDraw.forEach((product) => {
+  filmsToDraw.forEach(product => {
     const film = document.createElement('div');
     film.classList.add('film');
 
@@ -86,22 +101,54 @@ function draw(filterOption) {
     prefer.innerText = 'В избранное';
     actions.append(more, prefer);
 
+    const buyContainer = document.createElement('div');
+    const moreBtn = document.createElement('button');
+    moreBtn.textContent = '+';
+    const lessBtn = document.createElement('button');
+    lessBtn.textContent = '-';
+    const count = document.createElement('span');
+    count.textContent = '0';
+    buyContainer.append(lessBtn, count, moreBtn);
+
     more.onclick = () => {
       alert(`${product.id} ${product.titleRu}`);
     };
 
-    film.append(filmInfo, actions);
+    moreBtn.onclick = () => {
+      count.textContent = +count.textContent + 1;
+      const orders = JSON.parse(sessionStorage.getItem('orders'));
+      orders.push(product);
+      sessionStorage.setItem('orders', JSON.stringify(orders));
+      cardItemsCount.innerText = orders.length;
+    };
+
+    lessBtn.onclick = () => {
+      if (+count.textContent > 0) {
+        count.textContent = +count.textContent - 1;
+
+        const orders = JSON.parse(sessionStorage.getItem('orders'));
+        console.log(orders);
+        const index = orders.findIndex(order => order.id === product.id);
+
+        orders.splice(index, 1);
+
+        // orders.push(product);
+        sessionStorage.setItem('orders', JSON.stringify(orders));
+        cardItemsCount.innerText = orders.length;
+      }
+    };
+
+    film.append(filmInfo, actions, buyContainer);
     about.append(title, description);
     filmInfo.append(poster, about);
     filmsDiv.appendChild(film);
   });
-
-};
+}
 
 draw();
 
 const filterBio = document.querySelector('#bio');
-filterBio.onchange = (e) => {
+filterBio.onchange = e => {
   e.preventDefault();
   console.log(e.target.value);
   draw(e.target.value);

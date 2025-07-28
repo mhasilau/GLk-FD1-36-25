@@ -1,86 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./main/index.css">
-  <link rel="stylesheet" href="./styles/header.css">
-  <link rel="stylesheet" href="./styles/footer.css">
-  <link rel="stylesheet" href="./styles/common.css">
-  <title>Document</title>
-</head>
-<body>
-<div class="app">
-  <header class="header">
-    <div class="logo">
-      <img src="./assests/img/logo.png" alt="">
-    </div>
-    <div class="menu">
-      <ul>
-        <li>
-          <a href="">Главная</a>
-        </li>
-        <li>
-          <a href="">Страница</a>
-        </li>
-        <li>
-          <a href="">Страница</a>
-        </li>
-      </ul>
-    </div>
-    <div class="info">
-      <div class="user">
-        <img src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740"
-             alt="">
-      </div>
-      <div class="bucket">
-        <img src="./assests/img/bucket.png" alt="">
-      </div>
-      <div class="logout">
-        <img src="./assests/img/logout.png" alt="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./main/index.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/common.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="logo">
+          <img src="./assests/img/logo.png" alt="" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="">Главная</a>
+            </li>
+            <li>
+              <a href="">Страница</a>
+            </li>
+            <li>
+              <a href="">Страница</a>
+            </li>
+          </ul>
+        </div>
+        <div class="info">
+          <div class="user">
+            <img
+              src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740"
+              alt=""
+            />
+          </div>
+          <div class="bucket">
+            <img src="./assests/img/bucket.png" alt="" />
+            <div class="card">
+              <span id="card-items">0</span>
+            </div>
+          </div>
+          <div class="logout">
+            <img src="./assests/img/logout.png" alt="" />
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="filters">
+          <select id="bio">
+            <option value="" selected>Все</option>
+            <option value="fantastic">fantastic</option>
+            <option value="biography">biography</option>
+          </select>
+        </div>
+        <button id="get-data">get data</button>
+        <div class="films">
+          <!--      <div class="film">-->
 
-      </div>
+          <!--        <div class="film-info">-->
+          <!--          <div class="poster">-->
+          <!--            <img src="" alt="">-->
+          <!--          </div>-->
+          <!--          <div class="about">-->
+          <!--            <div class="title">-->
+          <!--              <span>Бэнмэн</span> <b>1998</b>-->
+          <!--            </div>-->
+          <!--            <div class="description">-->
+          <!--              <span>описание фильма</span>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <!--        </div>-->
+          <!--        <div class="actions">-->
+          <!--          <button>Подробнее</button>-->
+          <!--          <buttin>В избранное</buttin>-->
+          <!--        </div>-->
+          <!--        -->
+          <!--      </div>-->
+        </div>
+      </main>
+      <button id="btn1">1</button>
+      <button id="btn2">2</button>
+      <button id="btn3">3</button>
+      <footer class="footer">dsd</footer>
     </div>
-  </header>
-  <main class="main">
-    <div class="filters">
-      <select id="bio">
-        <option value="" selected>Все</option>
-        <option value="fantastic">fantastic</option>
-        <option value="biography">biography</option>
-      </select>
-    </div>
-    <div class="films">
-      <!--      <div class="film">-->
-
-      <!--        <div class="film-info">-->
-      <!--          <div class="poster">-->
-      <!--            <img src="" alt="">-->
-      <!--          </div>-->
-      <!--          <div class="about">-->
-      <!--            <div class="title">-->
-      <!--              <span>Бэнмэн</span> <b>1998</b>-->
-      <!--            </div>-->
-      <!--            <div class="description">-->
-      <!--              <span>описание фильма</span>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--        </div>-->
-      <!--        <div class="actions">-->
-      <!--          <button>Подробнее</button>-->
-      <!--          <buttin>В избранное</buttin>-->
-      <!--        </div>-->
-      <!--        -->
-      <!--      </div>-->
-    </div>
-  </main>
-  <button id="btn1">1</button>
-  <button id="btn2">2</button>
-  <button id="btn3">3</button>
-  <footer class="footer">dsd</footer>
-</div>
-<script src="./main/index.js"></script>
-</body>
+    <script src="./main/index.js"></script>
+  </body>
 </html>
